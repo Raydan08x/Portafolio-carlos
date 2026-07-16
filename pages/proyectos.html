@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio Profesional de CMMP - Analista de Datos, Científico de Datos y Desarrollador Full Stack.">
+    <meta name="keywords" content="Data Analyst, Data Science, Python, Java, React, SQL, Desarrollador, CMMP">
+    <meta name="author" content="CMMP">
+    <meta property="og:title" content="Portafolio Profesional | CMMP">
+    <meta property="og:description" content="Explora mi experiencia, proyectos y habilidades tecnológicas.">
+    <meta property="og:type" content="website">
+    <title>Proyectos - Carlos Madero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script type="module" src="../js/main.js"></script>
+</head>
+<body>
+    <div class="grid-glow-overlay"></div>
+    <!-- Navbar Desktop -->
+    <nav class="navbar">
+        <a href="../index.html" class="nav-brand" style="display: flex; align-items: center; gap: 0.5rem;"><img src="../assets/logo.png" alt="CMMP Logo" style="height: 32px; width: 32px; object-fit: contain;">CMMP</a>
+        <ul class="nav-links">
+            <li><a href="../index.html" class=""><span class="lang-es">Perfil</span><span class="lang-en">Profile</span></a></li>
+            <li><a href="stack.html" class="">Stack</a></li>
+            <li><a href="proyectos.html" class="active"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a></li>
+            <li><a href="experiencia.html" class=""><span class="lang-es">Experiencia</span><span class="lang-en">Experience</span></a></li>
+            <li><a href="contacto.html" class=""><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="btn-lang toggle-theme-btn" title="Toggle Theme" style="margin-right: 0.5rem;">
+                <span class="material-symbols-outlined theme-icon">dark_mode</span>
+            </button>
+            <button class="btn-lang toggle-lang-btn">
+                <span class="material-symbols-outlined">language</span>
+                <span class="lang-es">EN</span><span class="lang-en">ES</span>
+            </button>
+            <a href="contacto.html" class="btn-primary"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav">
+        <a href="../index.html" class="">
+            <span class="material-symbols-outlined">person</span>
+            <span class="lang-es">Perfil</span><span class="lang-en">Profile</span>
+        </a>
+        <a href="proyectos.html" class="active">
+            <span class="material-symbols-outlined">code</span>
+            <span class="lang-es">Proyectos</span><span class="lang-en">Projects</span>
+        </a>
+        <a href="experiencia.html" class="">
+            <span class="material-symbols-outlined">work</span>
+            <span class="lang-es">Exp</span><span class="lang-en">Exp</span>
+        </a>
+        <a href="contacto.html" class="">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="lang-es">Contacto</span><span class="lang-en">Contact</span>
+        </a>
+        <button class="toggle-lang-btn">
+            <span class="material-symbols-outlined">language</span>
+            <span class="lang-es">EN</span><span class="lang-en">ES</span>
+        </button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <div style="margin-bottom: 3rem;" class="animate-on-scroll">
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; background-color: var(--bg-surface-high); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                <span style="width: 8px; height: 8px; background-color: var(--secondary); border-radius: 50%;"></span>
+                <span class="text-secondary font-bold uppercase" style="font-size: 12px; letter-spacing: 2px;">Projects.log</span>
+            </div>
+            <h2 class="text-primary uppercase" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.1;">
+                <span class="lang-es">Portafolio de<br>Proyectos</span><span class="lang-en">Project<br>Portfolio</span>
+            </h2>
+            <div class="project-filters" style="display: flex; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; justify-content: center;">
+                <button class="filter-btn active bg-primary text-bg-color" data-filter="all" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: none; outline: none;"><span class="lang-es">Todos</span><span class="lang-en">All</span></button>
+                <button class="filter-btn bg-surface text-primary" data-filter="Python" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 1px solid var(--border-color); outline: none;">Python</button>
+                <button class="filter-btn bg-surface text-primary" data-filter="JavaScript" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 1px solid var(--border-color); outline: none;">JavaScript</button>
+                <button class="filter-btn bg-surface text-primary" data-filter="Java" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 1px solid var(--border-color); outline: none;">Java</button>
+                <button class="filter-btn bg-surface text-primary" data-filter="HTML" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 1px solid var(--border-color); outline: none;">HTML</button>
+                <button class="filter-btn bg-surface text-primary" data-filter="CSS" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 1px solid var(--border-color); outline: none;">CSS</button>
+                <button class="filter-btn bg-surface text-primary" data-filter="SQL" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 1px solid var(--border-color); outline: none;">SQL</button>
+                <button class="filter-btn bg-surface text-primary" data-filter="PostgreSQL" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 1px solid var(--border-color); outline: none;">PostgreSQL</button>
+                <button class="filter-btn bg-surface text-primary" data-filter="Node-RED" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 1px solid var(--border-color); outline: none;">Node-RED</button>
+                <button class="filter-btn bg-surface text-primary" data-filter="MQTT" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 1px solid var(--border-color); outline: none;">MQTT</button>
+                <button class="filter-btn bg-surface text-primary" data-filter="IA" style="padding: 0.25rem 0.75rem; font-size: 0.875rem; border-radius: 9999px; font-weight: 600; cursor: pointer; transition: all 0.3s; border: 1px solid var(--border-color); outline: none;"><span class="lang-es">IA / Vibe Coding</span><span class="lang-en">AI / Vibe Coding</span></button>
+            </div>
+            <p class="text-muted" style="max-width: 700px;">
+                <span class="lang-es">Desarrollo de software y análisis de datos aplicados a la mejora continua e ingeniería industrial.</span>
+                <span class="lang-en">Software development and data analysis applied to continuous improvement and industrial engineering.</span>
+            </p>
+        </div>
+        
+        <div class="grid-2 animate-on-scroll">
+            <div class="card project-card" data-category="IA VibeCoding">
+                <div class="card-decor"></div><h3 class="card-title">Prototipo Sierra Dorada</h3>
+                <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 14px;">
+                    <span class="lang-es">Prototipo web generado con IA mediante Vibe Coding. Herramientas utilizadas: Codex, Antigravity y OpenCode.</span>
+                    <span class="lang-en">Web prototype generated with AI through Vibe Coding. Tools used: Codex, Antigravity, and OpenCode.</span>
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">IA / AI</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">Vibe Coding</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">Codex</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">Antigravity</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">OpenCode</span>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: auto;">
+                    <a href="https://raydan08x.github.io/prototipo-sierradoradapage/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary);"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a> <button class="quick-view-btn" data-url="https://raydan08x.github.io/prototipo-sierradoradapage/" title="Vista rapida" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; color: var(--primary); transition: transform 0.2s;"><span class="material-symbols-outlined" style="font-size: 18px;">visibility</span></button>
+                    <a href="https://github.com/Raydan08x/prototipo-sierradoradapage" target="_blank" class="text-muted uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color);"><span class="lang-es">Repositorio</span><span class="lang-en">Repository</span></a>
+                </div>
+            </div>
+
+            <div class="card project-card" data-category="JavaScript HTML CSS">
+                <div class="card-decor"></div><h3 class="card-title">E-commerce Sierra Dorada</h3>
+                <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 14px;">
+                    <span class="lang-es">Proyecto de grado Generation (2026). Desarrollé una aplicación web responsiva para catálogo y venta de productos.</span>
+                    <span class="lang-en">Generation graduation project (2026). Developed a responsive web application for product catalog and sales.</span>
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">HTML</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">CSS</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">JavaScript</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">Git/GitHub</span>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: auto;">
+                    <a href="https://raydan08x.github.io/e-commerce-sierra-dorada/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary);"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a> <button class="quick-view-btn" data-url="https://raydan08x.github.io/e-commerce-sierra-dorada/" title="Vista rapida" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; color: var(--primary); transition: transform 0.2s;"><span class="material-symbols-outlined" style="font-size: 18px;">visibility</span></button>
+                    <a href="https://github.com/Raydan08x/e-commerce-sierra-dorada" target="_blank" class="text-muted uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color);"><span class="lang-es">Repositorio</span><span class="lang-en">Repository</span></a>
+                </div>
+            </div>
+            
+            <div class="card project-card" data-category="JavaScript HTML CSS">
+                <div class="card-decor"></div><h3 class="card-title">Trendy Shop</h3>
+                <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 14px;">
+                    <span class="lang-es">Hackathon Generation (2026). Construí una tienda virtual responsiva con consumo de API, catálogo de productos y filtros por categoría. Trabajo colaborativo.</span>
+                    <span class="lang-en">Generation Hackathon (2026). Built a responsive virtual store with API consumption, product catalog and category filters. Collaborative work.</span>
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">JavaScript</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">HTML</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">CSS</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">API</span>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: auto;">
+                    <a href="https://raydan08x.github.io/trendy-shop/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary);"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a> <button class="quick-view-btn" data-url="https://raydan08x.github.io/trendy-shop/" title="Vista rapida" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; color: var(--primary); transition: transform 0.2s;"><span class="material-symbols-outlined" style="font-size: 18px;">visibility</span></button>
+                    <a href="https://github.com/Raydan08x/trendy-shop" target="_blank" class="text-muted uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color);"><span class="lang-es">Repositorio</span><span class="lang-en">Repository</span></a>
+                </div>
+            </div>
+
+            <div class="card project-card" data-category="JavaScript">
+                <div class="card-decor"></div><h3 class="card-title">Pokedex App</h3>
+                <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 14px;">
+                    <span class="lang-es">Aplicación interactiva que consume la PokeAPI para mostrar información y estadísticas, implementando manipulación del DOM y fetch.</span>
+                    <span class="lang-en">Interactive application that consumes PokeAPI to display information and stats, implementing DOM manipulation and fetch.</span>
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">JavaScript</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">Fetch API</span>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: auto;">
+                    <a href="https://raydan08x.github.io/pokedex/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary);"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a> <button class="quick-view-btn" data-url="https://raydan08x.github.io/pokedex/" title="Vista rapida" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; color: var(--primary); transition: transform 0.2s;"><span class="material-symbols-outlined" style="font-size: 18px;">visibility</span></button>
+                    <a href="https://github.com/Raydan08x/pokedex" target="_blank" class="text-muted uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color);"><span class="lang-es">Repositorio</span><span class="lang-en">Repository</span></a>
+                </div>
+            </div>
+
+            <div class="card project-card" data-category="JavaScript">
+                <div class="card-decor"></div><h3 class="card-title">Task Manager</h3>
+                <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 14px;">
+                    <span class="lang-es">Administrador de tareas para gestionar pendientes, con funcionalidades de creación, edición y marcado de tareas completadas.</span>
+                    <span class="lang-en">Task manager to handle to-dos, with features to create, edit, and mark tasks as completed.</span>
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">JavaScript</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">DOM</span>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: auto;">
+                    <a href="https://raydan08x.github.io/task-manager/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary);"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a> <button class="quick-view-btn" data-url="https://raydan08x.github.io/task-manager/" title="Vista rapida" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; color: var(--primary); transition: transform 0.2s;"><span class="material-symbols-outlined" style="font-size: 18px;">visibility</span></button>
+                    <a href="https://github.com/Raydan08x/task-manager" target="_blank" class="text-muted uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color);"><span class="lang-es">Repositorio</span><span class="lang-en">Repository</span></a>
+                </div>
+            </div>
+
+            <div class="card project-card" data-category="Java">
+                <div class="card-decor"></div><h3 class="card-title">Bank Account (Java)</h3>
+                <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 14px;">
+                    <span class="lang-es">Sistema bancario básico desarrollado en Java demostrando principios de Programación Orientada a Objetos.</span>
+                    <span class="lang-en">Basic banking system developed in Java demonstrating Object-Oriented Programming principles.</span>
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">Java</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">OOP</span>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: auto;">
+                    <a href="https://github.com/Raydan08x/bank-account-java" target="_blank" class="text-muted uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color);"><span class="lang-es">Repositorio</span><span class="lang-en">Repository</span></a>
+                </div>
+            </div>
+            
+            <div class="card project-card" data-category="Python JavaScript HTML CSS">
+                <div class="card-decor"></div><h3 class="card-title">Material Reutilizable</h3>
+                <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 14px;">
+                    <span class="lang-es">Plataforma web para promover y gestionar el uso de material reutilizable, impulsando prácticas sostenibles.</span>
+                    <span class="lang-en">Web platform to promote and manage the use of reusable material, boosting sustainable practices.</span>
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">JavaScript</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">HTML5/CSS3</span>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: auto;">
+                    <a href="https://raydan08x.github.io/material-reutilizable/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary);"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a> <button class="quick-view-btn" data-url="https://raydan08x.github.io/material-reutilizable/" title="Vista rapida" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; color: var(--primary); transition: transform 0.2s;"><span class="material-symbols-outlined" style="font-size: 18px;">visibility</span></button>
+                    <a href="https://github.com/Raydan08x/material-reutilizable" target="_blank" class="text-muted uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color);"><span class="lang-es">Repositorio</span><span class="lang-en">Repository</span></a>
+                </div>
+            </div>
+            
+            <div class="card project-card" data-category="Python JavaScript PostgreSQL Node-RED MQTT SQL">
+                <div class="card-decor"></div><h3 class="card-title">BrewPi Control / Automation</h3>
+                <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 14px;">
+                    <span class="lang-es">Sistema de captura y visualización de datos con Raspberry Pi, ESP32, MQTT, Node-RED y PostgreSQL para monitorear fermentación.</span>
+                    <span class="lang-en">Data capture and visualization system with Raspberry Pi, ESP32, MQTT, Node-RED and PostgreSQL to monitor fermentation.</span>
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">PostgreSQL</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">Node-RED</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">MQTT</span>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: auto;">
+                    <a href="https://github.com/Raydan08x/BrewPiControl" target="_blank" class="text-muted uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color);"><span class="lang-es">Repositorio</span><span class="lang-en">Repository</span></a>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand animate-on-scroll">
+                <h2>CMMP.sys</h2>
+                <p>
+                    <span class="lang-es">AUTOMATIZAMOS HOY, MEJORAMOS SIEMPRE.</span>
+                    <span class="lang-en">AUTOMATING TODAY, IMPROVING ALWAYS.</span>
+                </p>
+            </div>
+            
+            <div class="footer-links animate-on-scroll">
+                <a href="mailto:cmadero08x@gmail.com"><span class="material-symbols-outlined">mail</span> Email</a>
+                <a href="https://www.linkedin.com/in/carlos-madero-perea-data-scientist/" target="_blank"><span class="material-symbols-outlined">link</span> LinkedIn</a>
+                <a href="https://github.com/Raydan08x" target="_blank"><span class="material-symbols-outlined">code</span> GitHub</a>
+                <a href="tel:+573138718154"><span class="material-symbols-outlined">call</span> <span class="lang-es">Teléfono</span><span class="lang-en">Phone</span></a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2026 CARLOS MANUEL MADERO PEREA.
+        </div>
+    </footer>
+
+    <!-- Preview Modal -->
+    <div id="preview-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title text-primary font-bold"><span class="lang-es">Vista Previa</span><span class="lang-en">Preview</span></span>
+                <div class="modal-actions">
+                    <a id="modal-external-link" href="#" target="_blank" class="btn-lang" title="Open in new tab" style="margin-right: 0.5rem;">
+                        <span class="material-symbols-outlined">open_in_new</span>
+                    </a>
+                    <button class="close-modal-btn btn-lang" title="Close">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="loader" id="modal-loader"></div>
+                <iframe id="preview-iframe" src="" frameborder="0" width="100%" height="100%" style="display: none;"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
