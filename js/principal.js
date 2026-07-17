@@ -4,7 +4,7 @@ import { iniciarEscrituraConsola, iniciarEscrituraExperiencia } from './escritur
 import { iniciarBrilloCursor } from './brilloCursor.js';
 import { iniciarModoVistaPrevia } from './modoVistaPrevia.js';
 import { GestorIdioma } from './gestorIdioma.js';
-import { iniciarAnimacionesScroll } from './animacionesScroll.js';
+import { iniciarAnimacionesScroll, iniciarAparicionConsolasExperiencia, iniciarInteraccionEducacion, iniciarAjusteEnlacesInternos } from './animacionesScroll.js';
 import { GestorTema } from './gestorTema.js';
 import { iniciarFiltroProyectos } from './filtroProyectos.js';
 
@@ -37,8 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializar módulos de la página
     iniciarAnimacionesScroll();
+    iniciarAparicionConsolasExperiencia();
+    iniciarInteraccionEducacion();
+    iniciarAjusteEnlacesInternos();
     iniciarFiltroProyectos();
     iniciarModoVistaPrevia();
     iniciarBrilloCursor();
     iniciarEscrituraConsola();
+    iniciarEscrituraExperiencia();
 });

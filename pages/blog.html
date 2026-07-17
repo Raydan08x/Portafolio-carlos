@@ -34,7 +34,7 @@
 
         <div class="grid-1 animate-on-scroll">
             <!-- Caso de Estudio 1 -->
-            <article class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
+            <article id="brewpi-control" class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
                     <h3 class="card-title text-primary" style="margin-bottom: 0;">BrewPi Control: Monitoreo IoT con Node-RED y PostgreSQL</h3>
                     <span class="text-muted" style="font-size: 12px; font-weight: 600;">10 JUL 2026</span>
@@ -44,6 +44,7 @@
                     <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">IoT</span>
                     <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">Node-RED</span>
                     <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">PostgreSQL</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">Vibe Coding / IA</span>
                 </div>
 
                 <div class="text-muted" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
@@ -56,8 +57,8 @@
                         <span class="lang-en"><strong>The Challenge:</strong> The main technical challenge was ensuring data persistence during network outages and orchestrating the MQTT message flow without overloading the PostgreSQL database running on limited hardware (Raspberry Pi).</span>
                     </p>
                     <p>
-                        <span class="lang-es"><strong>La Solución:</strong> Implementé una arquitectura basada en Node-RED como middleware. Node-RED se encarga de suscribirse a los tópicos MQTT, limpiar los datos y agruparlos en lotes antes de hacer las inserciones en PostgreSQL. Esto redujo las operaciones de escritura en un 40% y mejoró la estabilidad del sistema a largo plazo.</span>
-                        <span class="lang-en"><strong>The Solution:</strong> I implemented an architecture based on Node-RED as middleware. Node-RED subscribes to MQTT topics, cleans the data, and batches it before inserting into PostgreSQL. This reduced write operations by 40% and improved long-term system stability.</span>
+                        <span class="lang-es"><strong>La Solución:</strong> Implementé una arquitectura basada en Node-RED como middleware. Node-RED se encarga de suscribirse a los tópicos MQTT, limpiar los datos y agruparlos en lotes antes de hacer las inserciones en PostgreSQL. Esto redujo las operaciones de escritura en un 40% y mejoró la estabilidad del sistema a largo plazo. El desarrollo y la iteración de la interfaz SCADA se realizaron mediante un proceso de Vibe Coding asistido por IA, acompañado de revisión, pruebas y ajustes técnicos.</span>
+                        <span class="lang-en"><strong>The Solution:</strong> I implemented an architecture based on Node-RED as middleware. Node-RED subscribes to MQTT topics, cleans the data, and batches it before inserting into PostgreSQL. This reduced write operations by 40% and improved long-term system stability. The SCADA interface was developed and iterated through an AI-assisted Vibe Coding process, accompanied by technical review, testing, and refinement.</span>
                     </p>
                 </div>
 
@@ -68,7 +69,7 @@
             </article>
 
             <!-- Caso de Estudio 2 -->
-            <article class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
+            <article id="prototipo-sierra-dorada" class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
                     <h3 class="card-title text-primary" style="margin-bottom: 0;">Prototipo Sierra Dorada: Vibe Coding y Generación con IA</h3>
                     <span class="text-muted" style="font-size: 12px; font-weight: 600;">28 JUN 2026</span>
@@ -105,7 +106,7 @@
             </article>
         
             <!-- Caso de Estudio 3 -->
-            <article class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
+            <article id="ecommerce-sierra-dorada" class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
                     <h3 class="card-title text-primary" style="margin-bottom: 0;">E-commerce Sierra Dorada: Gestión de Estado en Vanilla JS</h3>
                     <span class="text-muted" style="font-size: 12px; font-weight: 600;">20 JUN 2026</span>
@@ -139,7 +140,7 @@
             </article>
 
             <!-- Caso de Estudio 4 -->
-            <article class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
+            <article id="trendy-shop" class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
                     <h3 class="card-title text-primary" style="margin-bottom: 0;">Trendy Shop: Filtrado Dinámico y Consumo de APIs REST</h3>
                     <span class="text-muted" style="font-size: 12px; font-weight: 600;">15 MAY 2026</span>
@@ -172,7 +173,7 @@
             </article>
 
             <!-- Caso de Estudio 5 -->
-            <article class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
+            <article id="pokedex-app" class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
                     <h3 class="card-title text-primary" style="margin-bottom: 0;">Pokedex App: Parseo de JSONs Anidados y Callbacks</h3>
                     <span class="text-muted" style="font-size: 12px; font-weight: 600;">10 ABR 2026</span>
@@ -205,7 +206,7 @@
             </article>
 
             <!-- Caso de Estudio 6 -->
-            <article class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
+            <article id="task-manager" class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
                     <h3 class="card-title text-primary" style="margin-bottom: 0;">Task Manager: Delegación de Eventos y Manipulación del DOM</h3>
                     <span class="text-muted" style="font-size: 12px; font-weight: 600;">25 MAR 2026</span>
@@ -238,7 +239,7 @@
             </article>
 
             <!-- Caso de Estudio 7 -->
-            <article class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
+            <article id="bank-account-java" class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
                     <h3 class="card-title text-primary" style="margin-bottom: 0;">Bank Account: Principios Solid y OOP en Java</h3>
                     <span class="text-muted" style="font-size: 12px; font-weight: 600;">05 MAR 2026</span>
@@ -271,7 +272,7 @@
             </article>
 
             <!-- Caso de Estudio 8 -->
-            <article class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
+            <article id="material-reutilizable" class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
                     <h3 class="card-title text-primary" style="margin-bottom: 0;">Material Reutilizable: Sostenibilidad mediante UI/UX</h3>
                     <span class="text-muted" style="font-size: 12px; font-weight: 600;">15 FEB 2026</span>
