@@ -19,7 +19,10 @@
     <main class="main-content">
 
         <section class="section text-center animate-on-scroll" style="min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <img src="assets/img/logo_cm.png" alt="Logo Carlos Madero" style="height: 140px; margin-bottom: 2rem; object-fit: contain; filter: drop-shadow(0 4px 15px rgba(0,0,0,0.3));">
+            <div class="logo-container" onclick="this.classList.toggle('active')">
+                <img src="assets/img/logo_cm.png" alt="Logo Carlos Madero" class="logo-img logo-default">
+                <img src="assets/img/logo_cm_pixel.png" alt="Logo Carlos Madero Pixel" class="logo-img logo-pixel">
+            </div>
             <h1 class="text-primary" style="font-size: 3rem; font-weight: 900; text-transform: uppercase; margin-bottom: 1rem;">
                 Carlos Madero Perea
             </h1>
@@ -47,13 +50,29 @@
         
         <section class="section animate-on-scroll">
             <h2 class="section-title"><span class="material-symbols-outlined">person</span> <span class="lang-es">Sobre Mí</span><span class="lang-en">About Me</span></h2>
-            <div class="grid-2">
+            <div class="grid-3-profile">
+                <!-- Tarjeta Flip de Foto de Perfil -->
+                <div class="flip-card animate-on-scroll" onclick="this.classList.toggle('hover_effect')">
+                    <div class="flip-card-inner">
+                        <!-- Frente: Foto Normal -->
+                        <div class="flip-card-front">
+                            <img src="assets/img/carlos.jpg" alt="Carlos Madero">
+                            <div class="flip-card-badge">Carlos Madero</div>
+                        </div>
+                        <!-- Atrás: Foto Pixel Art -->
+                        <div class="flip-card-back">
+                            <img src="assets/img/carlos-pixel.jpg" alt="Carlos Madero Pixel">
+                            <div class="flip-card-badge-pixel">Pixel Art</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card project-card">
                     <div class="card-decor"></div>
                     <h3 class="card-title"><span class="lang-es">Perfil Profesional</span><span class="lang-en">Professional Profile</span></h3>
                     <p class="text-muted">
                         <span class="lang-es">Ingeniero Químico de la Universidad de Cartagena, con sólida experiencia en planeación de producción, calidad y análisis de datos. Complemento mi perfil analítico con habilidades de programación en Java y Python, permitiéndome construir herramientas tecnológicas que solucionan problemas reales en la industria. Conocimientos en Pandas, NumPy, análisis estadístico, visualización de datos, Git/GitHub y fundamentos de machine learning.</span>
-                        <span class="lang-en">Chemical Engineer from the University of Cartagena, with solid experience in production planning, quality, and data analysis. I complement my analytical profile with programming skills in Java and Python, allowing me to build technological tools that solve real problems in the industry. Knowledge in Pandas, NumPy, statistical analysis, data visualization, Git/GitHub and machine learning fundamentals.</span>
+                        <span class="lang-en">Chemical Engineer from the University of Cartagena, with solid experience in production planning, quality, and data analysis. I complement mi analytical profile with programming skills in Java and Python, allowing me to build technological tools that solve real problems in the industry. Knowledge in Pandas, NumPy, statistical analysis, data visualization, Git/GitHub and machine learning fundamentals.</span>
                     </p>
                 </div>
                 <div class="card project-card">

@@ -786,3 +786,145 @@ html.light .theme-docker .console-badge { background: rgba(0,0,0,0.1); color: rg
     color: var(--bg-color);
     border-color: var(--primary);
 }
+
+
+/* === CARD FLIP (PERFIL FOTO) === */
+.grid-3-profile {
+    display: grid;
+    grid-template-columns: 320px 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+@media (max-width: 992px) {
+    .grid-3-profile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 400px;
+    perspective: 1200px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card.hover_effect .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.flip-card:hover .flip-card-front {
+    border-color: var(--secondary);
+}
+
+.flip-card:hover .flip-card-back {
+    border-color: var(--primary);
+}
+
+.flip-card-front img, .flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card-badge, .flip-card-badge-pixel {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.flip-card-badge {
+    background-color: rgba(18, 20, 20, 0.75);
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.flip-card-badge-pixel {
+    background-color: rgba(242, 202, 80, 0.85);
+    color: #000;
+    border: 1px solid var(--primary);
+}
+
+
+/* === TRANSICION DE LOGO (NORMAL A PIXEL ART) === */
+.logo-container {
+    position: relative;
+    height: 140px;
+    width: 140px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.logo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 15px rgba(0,0,0,0.3));
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.logo-default {
+    opacity: 1;
+    z-index: 2;
+}
+
+.logo-pixel {
+    opacity: 0;
+    z-index: 1;
+}
+
+.logo-container:hover .logo-default,
+.logo-container.active .logo-default {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.logo-container:hover .logo-pixel,
+.logo-container.active .logo-pixel {
+    opacity: 1;
+    z-index: 2;
+    transform: scale(1.05);
+}
