@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog y Casos de Estudio de Carlos Madero Perea - Analista de Datos, Científico de Datos y Desarrollador Full Stack.">
+    <meta name="keywords" content="Blog, Data Analyst, Data Science, Python, Java, Desarrollador, Carlos Madero Perea">
+    <meta name="author" content="Carlos Madero Perea">
+    <meta property="og:title" content="Blog & Casos de Estudio | Carlos Madero Perea">
+    <meta property="og:description" content="Lee mis aprendizajes, retos técnicos y soluciones en desarrollo de software y ciencia de datos.">
+    <meta property="og:type" content="website">
+    <title>Blog - Carlos Madero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script type="module" src="../js/principal.js"></script>
+</head>
+<body>
+    <main class="main-content">
+
+        <div style="margin-bottom: 3rem;" class="animate-on-scroll">
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; background-color: var(--bg-surface-high); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                <span style="width: 8px; height: 8px; background-color: var(--secondary); border-radius: 50%;"></span>
+                <span class="text-secondary font-bold uppercase" style="font-size: 12px; letter-spacing: 2px;">Tech_Blog.md</span>
+            </div>
+            <h2 class="text-primary uppercase" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.1;">
+                <span class="lang-es">Blog &<br>Casos de Estudio</span><span class="lang-en">Blog &<br>Case Studies</span>
+            </h2>
+            <p class="text-muted" style="max-width: 700px;">
+                <span class="lang-es">Documentando mi viaje en el código: retos técnicos, soluciones arquitectónicas y lecciones aprendidas en el mundo del desarrollo y los datos.</span>
+                <span class="lang-en">Documenting my coding journey: technical challenges, architectural solutions, and lessons learned in the world of development and data.</span>
+            </p>
+        </div>
+
+        <div class="grid-1 animate-on-scroll">
+            <!-- Caso de Estudio 1 -->
+            <article class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
+                    <h3 class="card-title text-primary" style="margin-bottom: 0;">BrewPi Control: Monitoreo IoT con Node-RED y PostgreSQL</h3>
+                    <span class="text-muted" style="font-size: 12px; font-weight: 600;">10 JUL 2026</span>
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">IoT</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">Node-RED</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">PostgreSQL</span>
+                </div>
+
+                <div class="text-muted" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <p>
+                        <span class="lang-es"><strong>El Contexto:</strong> Necesitábamos un sistema confiable para monitorear las temperaturas de fermentación en tiempo real utilizando microcontroladores ESP32 y una Raspberry Pi como servidor central.</span>
+                        <span class="lang-en"><strong>The Context:</strong> We needed a reliable system to monitor fermentation temperatures in real-time using ESP32 microcontrollers and a Raspberry Pi as the central server.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>El Desafío:</strong> El principal reto técnico fue asegurar la persistencia de los datos ante cortes de red y la orquestación del flujo de mensajes MQTT sin sobrecargar la base de datos PostgreSQL, la cual corría en hardware limitado (Raspberry Pi).</span>
+                        <span class="lang-en"><strong>The Challenge:</strong> The main technical challenge was ensuring data persistence during network outages and orchestrating the MQTT message flow without overloading the PostgreSQL database running on limited hardware (Raspberry Pi).</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>La Solución:</strong> Implementé una arquitectura basada en Node-RED como middleware. Node-RED se encarga de suscribirse a los tópicos MQTT, limpiar los datos y agruparlos en lotes antes de hacer las inserciones en PostgreSQL. Esto redujo las operaciones de escritura en un 40% y mejoró la estabilidad del sistema a largo plazo.</span>
+                        <span class="lang-en"><strong>The Solution:</strong> I implemented an architecture based on Node-RED as middleware. Node-RED subscribes to MQTT topics, cleans the data, and batches it before inserting into PostgreSQL. This reduced write operations by 40% and improved long-term system stability.</span>
+                    </p>
+                </div>
+
+                <a href="https://github.com/Raydan08x/BrewPiControl" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary); display: inline-flex; align-items: center; gap: 0.25rem;">
+                    <span class="lang-es">Ver Repositorio</span><span class="lang-en">View Repository</span>
+                    <span class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span>
+                </a>
+            </article>
+
+            <!-- Caso de Estudio 2 -->
+            <article class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
+                    <h3 class="card-title text-primary" style="margin-bottom: 0;">Prototipo Sierra Dorada: Vibe Coding y Generación con IA</h3>
+                    <span class="text-muted" style="font-size: 12px; font-weight: 600;">28 JUN 2026</span>
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">Vibe Coding</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">OpenCode</span>
+                </div>
+
+                <div class="text-muted" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <p>
+                        <span class="lang-es"><strong>El Contexto:</strong> Desarrollo rápido de un prototipo funcional para un cliente corporativo (Sierra Dorada) reduciendo drásticamente el tiempo de maquetación inicial.</span>
+                        <span class="lang-en"><strong>The Context:</strong> Rapid development of a functional prototype for a corporate client (Sierra Dorada) drastically reducing initial mockup time.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>El Desafío:</strong> Trasladar los requerimientos de diseño de alto nivel a prompts efectivos para modelos de IA sin perder control sobre la semántica del HTML y la especificidad del CSS. La IA a menudo genera código inflado o no responsivo si no se guía correctamente.</span>
+                        <span class="lang-en"><strong>The Challenge:</strong> Translating high-level design requirements into effective prompts for AI models without losing control over HTML semantics and CSS specificity. AI often generates bloated or non-responsive code if not guided correctly.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>La Solución:</strong> Adopté una estrategia de "Vibe Coding" iterativa. En lugar de pedir la página completa, usé herramientas como Antigravity para modularizar los componentes (Navbar, Footer, Hero) en prompts separados, asegurando que el código generado se apegará a variables CSS estándar y HTML semántico vanilla.</span>
+                        <span class="lang-en"><strong>The Solution:</strong> I adopted an iterative "Vibe Coding" strategy. Instead of asking for the full page, I used tools like Antigravity to modularize components (Navbar, Footer, Hero) into separate prompts, ensuring the generated code adhered to standard CSS variables and semantic vanilla HTML.</span>
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://raydan08x.github.io/prototipo-sierradoradapage/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary); display: inline-flex; align-items: center; gap: 0.25rem;">
+                        <span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span>
+                    </a>
+                    <a href="https://github.com/Raydan08x/prototipo-sierradoradapage" target="_blank" class="text-muted font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 0.25rem;">
+                        <span class="lang-es">Ver Repositorio</span><span class="lang-en">View Repository</span>
+                    </a>
+                </div>
+            </article>
+        
+            <!-- Caso de Estudio 3 -->
+            <article class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
+                    <h3 class="card-title text-primary" style="margin-bottom: 0;">E-commerce Sierra Dorada: Gestión de Estado en Vanilla JS</h3>
+                    <span class="text-muted" style="font-size: 12px; font-weight: 600;">20 JUN 2026</span>
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">JavaScript</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">DOM</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">CSS Grid</span>
+                </div>
+
+                <div class="text-muted" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <p>
+                        <span class="lang-es"><strong>El Contexto:</strong> Desarrollo del proyecto integrador de Generation, construyendo una tienda en línea completa desde cero sin utilizar frameworks reactivos.</span>
+                        <span class="lang-en"><strong>The Context:</strong> Development of the Generation capstone project, building a complete online store from scratch without using reactive frameworks.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>El Desafío:</strong> Mantener el carrito de compras sincronizado entre múltiples pestañas y vistas, asegurando que los cambios de estado (agregar, eliminar, cambiar cantidad) se reflejaran instantáneamente en el DOM sin recargar la página.</span>
+                        <span class="lang-en"><strong>The Challenge:</strong> Keeping the shopping cart synchronized across multiple tabs and views, ensuring state changes (add, remove, change quantity) reflected instantly in the DOM without reloading the page.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>La Solución:</strong> Diseñé un patrón de gestión de estado centralizado utilizando <code>localStorage</code> y eventos personalizados de JavaScript (CustomEvents). Esto permitió crear componentes débilmente acoplados que reaccionan a los cambios del carrito de forma eficiente y mantenible.</span>
+                        <span class="lang-en"><strong>The Solution:</strong> I designed a centralized state management pattern using <code>localStorage</code> and JavaScript CustomEvents. This allowed creating loosely coupled components that react to cart changes efficiently and maintainably.</span>
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://raydan08x.github.io/e-commerce-sierra-dorada/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a>
+                    <a href="https://github.com/Raydan08x/e-commerce-sierra-dorada" target="_blank" class="text-muted font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Repositorio</span><span class="lang-en">View Repository</span></a>
+                </div>
+            </article>
+
+            <!-- Caso de Estudio 4 -->
+            <article class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
+                    <h3 class="card-title text-primary" style="margin-bottom: 0;">Trendy Shop: Filtrado Dinámico y Consumo de APIs REST</h3>
+                    <span class="text-muted" style="font-size: 12px; font-weight: 600;">15 MAY 2026</span>
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">Fetch API</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">Asynchronous JS</span>
+                </div>
+
+                <div class="text-muted" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <p>
+                        <span class="lang-es"><strong>El Contexto:</strong> Una Hackathon en equipo donde el objetivo era construir una tienda virtual responsiva que consumiera un catálogo de productos desde un backend externo.</span>
+                        <span class="lang-en"><strong>The Context:</strong> A team Hackathon where the goal was to build a responsive virtual store that consumed a product catalog from an external backend.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>El Desafío:</strong> Manejar la latencia de la red, los errores de la API y renderizar cientos de productos de manera eficiente en el navegador sin bloquear el hilo principal. Además, se requería un filtrado complejo por categorías y precios en tiempo real.</span>
+                        <span class="lang-en"><strong>The Challenge:</strong> Handling network latency, API errors, and rendering hundreds of products efficiently in the browser without blocking the main thread. In addition, complex real-time filtering by categories and prices was required.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>La Solución:</strong> Implementé Promesas asíncronas con <code>async/await</code> y bloques <code>try/catch</code> para un manejo de errores robusto. Para el rendimiento, apliqué <i>debouncing</i> en las entradas de búsqueda y un patrón de delegación de eventos para los filtros, minimizando los event listeners en el DOM.</span>
+                        <span class="lang-en"><strong>The Solution:</strong> I implemented asynchronous Promises with <code>async/await</code> and <code>try/catch</code> blocks for robust error handling. For performance, I applied <i>debouncing</i> on search inputs and an event delegation pattern for filters, minimizing DOM event listeners.</span>
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://raydan08x.github.io/trendy-shop/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a>
+                    <a href="https://github.com/Raydan08x/trendy-shop" target="_blank" class="text-muted font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Repositorio</span><span class="lang-en">View Repository</span></a>
+                </div>
+            </article>
+
+            <!-- Caso de Estudio 5 -->
+            <article class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
+                    <h3 class="card-title text-primary" style="margin-bottom: 0;">Pokedex App: Parseo de JSONs Anidados y Callbacks</h3>
+                    <span class="text-muted" style="font-size: 12px; font-weight: 600;">10 ABR 2026</span>
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">PokeAPI</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">JSON</span>
+                </div>
+
+                <div class="text-muted" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <p>
+                        <span class="lang-es"><strong>El Contexto:</strong> Aplicación interactiva creada para practicar el consumo de APIs complejas y manipulación avanzada del DOM.</span>
+                        <span class="lang-en"><strong>The Context:</strong> Interactive application created to practice complex API consumption and advanced DOM manipulation.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>El Desafío:</strong> La PokeAPI tiene una estructura JSON altamente anidada. Extraer la imagen correcta, las estadísticas base y los tipos sin crear un "callback hell" (infierno de callbacks) o código espagueti.</span>
+                        <span class="lang-en"><strong>The Challenge:</strong> The PokeAPI has a highly nested JSON structure. Extracting the correct image, base stats, and types without creating a "callback hell" or spaghetti code.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>La Solución:</strong> Escribí funciones auxiliares puras para el parseo y mapeo de datos. Separé estrictamente la lógica de obtención de datos (data fetching) de la lógica de renderizado del DOM, siguiendo el principio de Responsabilidad Única.</span>
+                        <span class="lang-en"><strong>The Solution:</strong> I wrote pure helper functions for data parsing and mapping. I strictly separated the data fetching logic from the DOM rendering logic, following the Single Responsibility principle.</span>
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://raydan08x.github.io/pokedex/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a>
+                    <a href="https://github.com/Raydan08x/pokedex" target="_blank" class="text-muted font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Repositorio</span><span class="lang-en">View Repository</span></a>
+                </div>
+            </article>
+
+            <!-- Caso de Estudio 6 -->
+            <article class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
+                    <h3 class="card-title text-primary" style="margin-bottom: 0;">Task Manager: Delegación de Eventos y Manipulación del DOM</h3>
+                    <span class="text-muted" style="font-size: 12px; font-weight: 600;">25 MAR 2026</span>
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">Event Listeners</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">CRUD</span>
+                </div>
+
+                <div class="text-muted" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <p>
+                        <span class="lang-es"><strong>El Contexto:</strong> Aplicación fundamental tipo To-Do list para afianzar los conceptos de manipulación directa del DOM (Crear, Leer, Actualizar y Eliminar).</span>
+                        <span class="lang-en"><strong>The Context:</strong> A fundamental To-Do list application to consolidate concepts of direct DOM manipulation (Create, Read, Update, and Delete).</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>El Desafío:</strong> Al agregar nuevas tareas dinámicamente, los botones de "Eliminar" y "Editar" de esos nuevos elementos no respondían a los event listeners previamente adjuntados.</span>
+                        <span class="lang-en"><strong>The Challenge:</strong> When adding new tasks dynamically, the "Delete" and "Edit" buttons of those new elements did not respond to the previously attached event listeners.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>La Solución:</strong> Descubrí y apliqué el patrón de <i>Event Delegation</i> (Delegación de eventos). En lugar de agregar un listener a cada botón individual, agregué un solo listener a la lista padre (ul), capturando y procesando los eventos a través del event bubbling basándome en el target seleccionado.</span>
+                        <span class="lang-en"><strong>The Solution:</strong> I discovered and applied the <i>Event Delegation</i> pattern. Instead of adding a listener to each individual button, I added a single listener to the parent list (ul), capturing and processing events through event bubbling based on the selected target.</span>
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://raydan08x.github.io/task-manager/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a>
+                    <a href="https://github.com/Raydan08x/task-manager" target="_blank" class="text-muted font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Repositorio</span><span class="lang-en">View Repository</span></a>
+                </div>
+            </article>
+
+            <!-- Caso de Estudio 7 -->
+            <article class="card" style="padding: 2rem; border-left: 4px solid var(--secondary);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
+                    <h3 class="card-title text-primary" style="margin-bottom: 0;">Bank Account: Principios Solid y OOP en Java</h3>
+                    <span class="text-muted" style="font-size: 12px; font-weight: 600;">05 MAR 2026</span>
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">Java</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">OOP</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">Solid</span>
+                </div>
+
+                <div class="text-muted" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <p>
+                        <span class="lang-es"><strong>El Contexto:</strong> Simulación de backend para un sistema bancario utilizando Java, manejando conceptos base de programación orientada a objetos.</span>
+                        <span class="lang-en"><strong>The Context:</strong> Backend simulation for a banking system using Java, handling core object-oriented programming concepts.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>El Desafío:</strong> Diseñar una arquitectura segura donde el saldo de la cuenta no pudiera ser modificado externamente, e implementar validaciones rigurosas para evitar sobregiros y transacciones negativas.</span>
+                        <span class="lang-en"><strong>The Challenge:</strong> Designing a secure architecture where the account balance could not be modified externally, and implementing rigorous validations to prevent overdrafts and negative transactions.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>La Solución:</strong> Implementé el encapsulamiento protegiendo las propiedades con modificadores de acceso <code>private</code> y exponiendo la interacción únicamente a través de métodos controlados (deposit, withdraw). Además utilicé polimorfismo para manejar distintos tipos de cuentas bancarias.</span>
+                        <span class="lang-en"><strong>The Solution:</strong> I implemented encapsulation by protecting properties with <code>private</code> access modifiers and exposing interaction solely through controlled methods (deposit, withdraw). I also used polymorphism to handle different types of bank accounts.</span>
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://github.com/Raydan08x/bank-account-java" target="_blank" class="text-muted font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Repositorio</span><span class="lang-en">View Repository</span></a>
+                </div>
+            </article>
+
+            <!-- Caso de Estudio 8 -->
+            <article class="card" style="padding: 2rem; border-left: 4px solid var(--primary);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem;">
+                    <h3 class="card-title text-primary" style="margin-bottom: 0;">Material Reutilizable: Sostenibilidad mediante UI/UX</h3>
+                    <span class="text-muted" style="font-size: 12px; font-weight: 600;">15 FEB 2026</span>
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--secondary); color: var(--secondary);">UX/UI</span>
+                    <span style="font-size: 10px; padding: 4px 8px; border: 1px solid var(--primary); color: var(--primary);">Responsive Design</span>
+                </div>
+
+                <div class="text-muted" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <p>
+                        <span class="lang-es"><strong>El Contexto:</strong> Plataforma para fomentar la reutilización de materiales promoviendo una economía circular dentro de un entorno corporativo o comunitario.</span>
+                        <span class="lang-en"><strong>The Context:</strong> Platform to encourage material reuse by promoting a circular economy within a corporate or community environment.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>El Desafío:</strong> Conseguir la adopción por parte del usuario. Los sistemas internos suelen ser difíciles de usar. El reto fue diseñar una interfaz atractiva y 100% responsiva que facilitara listar y buscar materiales sin fricción.</span>
+                        <span class="lang-en"><strong>The Challenge:</strong> Achieving user adoption. Internal systems are often hard to use. The challenge was designing an attractive and 100% responsive interface that made listing and searching materials frictionless.</span>
+                    </p>
+                    <p>
+                        <span class="lang-es"><strong>La Solución:</strong> Implementé el enfoque <i>Mobile-First</i> utilizando Flexbox y variables CSS para el enrutamiento visual de la jerarquía. La aplicación se adapta perfectamente desde dispositivos de 320px hasta pantallas ultra-anchas.</span>
+                        <span class="lang-en"><strong>The Solution:</strong> I implemented a <i>Mobile-First</i> approach using Flexbox and CSS variables for visual hierarchy routing. The application scales perfectly from 320px devices to ultra-wide screens.</span>
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://raydan08x.github.io/material-reutilizable/" target="_blank" class="text-secondary font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--secondary); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Demo</span><span class="lang-en">Live Demo</span></a>
+                    <a href="https://github.com/Raydan08x/material-reutilizable" target="_blank" class="text-muted font-bold uppercase" style="font-size: 12px; border-bottom: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 0.25rem;"><span class="lang-es">Ver Repositorio</span><span class="lang-en">View Repository</span></a>
+                </div>
+            </article>
+
+        </div>
+        
+    </main>
+
+</body>
+</html>

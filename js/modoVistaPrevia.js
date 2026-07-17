@@ -1,59 +1,63 @@
-export function initPreviewMode() {
+// Inicializa el modal de vista previa para proyectos
+export function iniciarModoVistaPrevia() {
     const modal = document.getElementById('preview-modal');
     if (!modal) return;
     
     const iframe = document.getElementById('preview-iframe');
-    const closeBtn = document.querySelector('.close-modal-btn');
-    const loader = document.getElementById('modal-loader');
-    const externalLink = document.getElementById('modal-external-link');
+    const btnCerrar = document.querySelector('.close-modal-btn');
+    const cargador = document.getElementById('modal-loader');
+    const enlaceExterno = document.getElementById('modal-external-link');
 
-    // Attach to all quick view buttons
+    // Vincular a todos los botones de vista rápida
     document.querySelectorAll('.quick-view-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             const url = btn.getAttribute('data-url');
             if (url) {
-                // Show modal
+                // Mostrar modal
                 modal.style.display = 'flex';
-                // Trigger reflow
+                // Forzar reflujo del DOM
                 modal.offsetHeight;
                 modal.classList.add('show');
                 
-                // Setup iframe
-                loader.style.display = 'block';
+                // Configurar iframe
+                cargador.style.display = 'block';
                 iframe.style.display = 'none';
                 iframe.src = url;
-                externalLink.href = url;
+                enlaceExterno.href = url;
                 
                 iframe.onload = () => {
-                    loader.style.display = 'none';
+                    cargador.style.display = 'none';
                     iframe.style.display = 'block';
                 };
                 
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                // Evitar scroll en el fondo
+                document.body.style.overflow = 'hidden';
             }
         });
     });
 
-    function closeModal() {
+    function cerrarModal() {
         modal.classList.remove('show');
         setTimeout(() => {
             modal.style.display = 'none';
-            iframe.src = ''; // Clear iframe to stop playback/loading
+            // Limpiar iframe para detener reproducción/carga
+            iframe.src = '';
             document.body.style.overflow = '';
         }, 300);
     }
 
-    closeBtn.addEventListener('click', closeModal);
+    btnCerrar.addEventListener('click', cerrarModal);
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-            closeModal();
+            cerrarModal();
         }
     });
     
+    // Cerrar modal con tecla Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.style.display === 'flex') {
-            closeModal();
+            cerrarModal();
         }
     });
 }
